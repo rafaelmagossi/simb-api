@@ -4,6 +4,7 @@ import com.magossi.apisimb.domain.bovino.Bovino;
 
 import com.magossi.apisimb.domain.bovino.Ecc;
 import com.magossi.apisimb.domain.bovino.Peso;
+import com.magossi.apisimb.domain.matriz.FichaMatriz;
 import com.magossi.apisimb.service.bovino.BovinoService;
 import com.magossi.apisimb.service.bovino.EccService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +61,19 @@ public class BovinoResources {
     public ResponseEntity<Void> salvarPesoBovino(@PathVariable("id") Long id, @RequestBody Peso peso){
         Bovino bovino = bovinoService.buscarId(id);
         bovino.getPeso().add(peso);
+        bovino = bovinoService.salvar(bovino);
+
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
+
+    @RequestMapping(value = "/{id}/fichamatriz", method =  RequestMethod.POST)
+    public ResponseEntity<Void> salvarFichaMatrizBovino(@PathVariable("id") Long id, @RequestBody FichaMatriz fichaMatriz){
+        Bovino bovino = bovinoService.buscarId(id);
+        bovino.setFichaMatriz(new FichaMatriz());
         bovino = bovinoService.salvar(bovino);
 
 

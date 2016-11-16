@@ -1,5 +1,6 @@
 package com.magossi.apisimb.domain.matriz;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.magossi.apisimb.domain.bovino.Bovino;
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Created by RafaelMq on 04/11/2016.
  */
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 public class FichaMatriz {
 
@@ -21,11 +22,6 @@ public class FichaMatriz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFichaMatriz;
-
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    @OneToOne
-    private Bovino bovino;
-
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -40,13 +36,11 @@ public class FichaMatriz {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<IntervaloParto> intervaloParto;
 
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date dataInclusao = new Date();
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Boolean status;
-
-
 
 
     public Long getIdFichaMatriz() {
@@ -55,14 +49,6 @@ public class FichaMatriz {
 
     public void setIdFichaMatriz(Long idFichaMatriz) {
         this.idFichaMatriz = idFichaMatriz;
-    }
-
-    public Bovino getBovino() {
-        return bovino;
-    }
-
-    public void setBovino(Bovino bovino) {
-        this.bovino = bovino;
     }
 
     public List<Inseminacao> getInseminacao() {
@@ -91,6 +77,10 @@ public class FichaMatriz {
 
     public Date getDataInclusao() {
         return dataInclusao;
+    }
+
+    public void setDataInclusao(Date dataInclusao) {
+        this.dataInclusao = dataInclusao;
     }
 
     public Boolean getStatus() {

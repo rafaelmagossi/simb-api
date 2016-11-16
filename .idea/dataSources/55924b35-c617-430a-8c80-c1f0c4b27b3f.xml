@@ -10,8 +10,8 @@
     <schema id="3" parent="1" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-state-number>4269</introspection-state-number>
-      <introspection-timestamp>2016-11-13.23:19:27.298</introspection-timestamp>
+      <introspection-state-number>4328</introspection-state-number>
+      <introspection-timestamp>2016-11-16.16:09:09.891</introspection-timestamp>
     </schema>
     <schema id="4" parent="1" name="pg_catalog">
       <object-id>11</object-id>
@@ -84,855 +84,929 @@
       <object-id>25831</object-id>
       <state-number>4201</state-number>
     </sequence>
-    <table id="23" parent="3" name="bovino">
+    <sequence id="23" parent="3" name="tarefa_id_tarefa_seq">
+      <object-id>25980</object-id>
+      <state-number>4310</state-number>
+    </sequence>
+    <table id="24" parent="3" name="bovino">
       <object-id>25705</object-id>
-      <state-number>4269</state-number>
+      <state-number>4311</state-number>
     </table>
-    <table id="24" parent="3" name="bovino_ecc">
+    <table id="25" parent="3" name="bovino_ecc">
       <object-id>25714</object-id>
       <state-number>4213</state-number>
     </table>
-    <table id="25" parent="3" name="bovino_peso">
+    <table id="26" parent="3" name="bovino_peso">
       <object-id>25717</object-id>
       <state-number>4215</state-number>
     </table>
-    <table id="26" parent="3" name="diagnostico_gestacao">
+    <table id="27" parent="3" name="diagnostico_gestacao">
       <object-id>25722</object-id>
-      <state-number>4218</state-number>
+      <state-number>4323</state-number>
     </table>
-    <table id="27" parent="3" name="ecc">
+    <table id="28" parent="3" name="ecc">
       <object-id>25730</object-id>
       <state-number>4212</state-number>
     </table>
-    <table id="28" parent="3" name="fazenda">
+    <table id="29" parent="3" name="fazenda">
       <object-id>25738</object-id>
       <state-number>4208</state-number>
     </table>
-    <table id="29" parent="3" name="ficha_matriz">
+    <table id="30" parent="3" name="ficha_matriz">
       <object-id>25749</object-id>
-      <state-number>4223</state-number>
+      <state-number>4328</state-number>
     </table>
-    <table id="30" parent="3" name="ficha_matriz_diagnostico_gestacao">
-      <object-id>25755</object-id>
-      <state-number>4219</state-number>
+    <table id="31" parent="3" name="ficha_matriz_diagnostico_gestacao">
+      <object-id>25993</object-id>
+      <state-number>4324</state-number>
     </table>
-    <table id="31" parent="3" name="ficha_matriz_inseminacao">
-      <object-id>25758</object-id>
-      <state-number>4221</state-number>
+    <table id="32" parent="3" name="ficha_matriz_inseminacao">
+      <object-id>25996</object-id>
+      <state-number>4326</state-number>
     </table>
-    <table id="32" parent="3" name="ficha_matriz_intervalo_parto">
-      <object-id>25761</object-id>
-      <state-number>4223</state-number>
+    <table id="33" parent="3" name="ficha_matriz_intervalo_parto">
+      <object-id>25999</object-id>
+      <state-number>4328</state-number>
     </table>
-    <table id="33" parent="3" name="inseminacao">
+    <table id="34" parent="3" name="inseminacao">
       <object-id>25766</object-id>
-      <state-number>4226</state-number>
+      <state-number>4325</state-number>
     </table>
-    <table id="34" parent="3" name="inseminador">
+    <table id="35" parent="3" name="inseminador">
       <object-id>25774</object-id>
       <state-number>4224</state-number>
     </table>
-    <table id="35" parent="3" name="intervalo_parto">
+    <table id="36" parent="3" name="intervalo_parto">
       <object-id>25782</object-id>
-      <state-number>4222</state-number>
+      <state-number>4327</state-number>
     </table>
-    <table id="36" parent="3" name="parto">
+    <table id="37" parent="3" name="parto">
       <object-id>25790</object-id>
       <state-number>4228</state-number>
     </table>
-    <table id="37" parent="3" name="parto_bovino_parto">
+    <table id="38" parent="3" name="parto_bovino_parto">
       <object-id>25796</object-id>
       <state-number>4228</state-number>
     </table>
-    <table id="38" parent="3" name="pelagem">
+    <table id="39" parent="3" name="pelagem">
       <object-id>25801</object-id>
       <state-number>4209</state-number>
     </table>
-    <table id="39" parent="3" name="peso">
+    <table id="40" parent="3" name="peso">
       <object-id>25809</object-id>
       <state-number>4214</state-number>
     </table>
-    <table id="40" parent="3" name="proprietario">
+    <table id="41" parent="3" name="proprietario">
       <object-id>25817</object-id>
       <state-number>4210</state-number>
     </table>
-    <table id="41" parent="3" name="raca">
+    <table id="42" parent="3" name="raca">
       <object-id>25825</object-id>
       <state-number>4211</state-number>
     </table>
-    <table id="42" parent="3" name="resultado">
+    <table id="43" parent="3" name="resultado">
       <object-id>25833</object-id>
       <state-number>4216</state-number>
     </table>
-    <column id="43" parent="23" name="id_bovino">
+    <table id="44" parent="3" name="tarefa">
+      <object-id>25982</object-id>
+      <state-number>4311</state-number>
+    </table>
+    <column id="45" parent="24" name="id_bovino">
       <state-number>4182</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('bovino_id_bovino_seq'::regclass)</default-expression>
     </column>
-    <column id="44" parent="23" name="data_inclusao">
+    <column id="46" parent="24" name="data_inclusao">
       <state-number>4182</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="45" parent="23" name="data_nascimento">
+    <column id="47" parent="24" name="data_nascimento">
       <state-number>4182</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="46" parent="23" name="genero">
+    <column id="48" parent="24" name="genero">
       <state-number>4182</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="47" parent="23" name="mae">
+    <column id="49" parent="24" name="mae">
       <state-number>4182</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="48" parent="23" name="nome_bovino">
+    <column id="50" parent="24" name="nome_bovino">
       <state-number>4182</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="49" parent="23" name="pai">
+    <column id="51" parent="24" name="pai">
       <state-number>4182</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="50" parent="23" name="status">
+    <column id="52" parent="24" name="status">
       <state-number>4182</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="51" parent="23" name="tag">
+    <column id="53" parent="24" name="tag">
       <state-number>4182</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="52" parent="23" name="fazenda_idfazenda">
+    <column id="54" parent="24" name="fazenda_idfazenda">
       <state-number>4182</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="53" parent="23" name="pelagem_idpelagem">
+    <column id="55" parent="24" name="pelagem_idpelagem">
       <state-number>4182</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="54" parent="23" name="proprietario_idproprietario">
+    <column id="56" parent="24" name="proprietario_idproprietario">
       <state-number>4182</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="55" parent="23" name="raca_idraca">
+    <column id="57" parent="24" name="raca_idraca">
       <state-number>4182</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="56" parent="23" name="url_foto">
+    <column id="58" parent="24" name="url_foto">
       <state-number>4260</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="57" parent="23" name="descricao">
+    <column id="59" parent="24" name="descricao">
       <state-number>4269</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <index id="58" parent="23" name="bovino_pkey">
+    <column id="60" parent="24" name="ficha_matriz_idfichamatriz">
+      <state-number>4304</state-number>
+      <data-type>bigint|0</data-type>
+    </column>
+    <index id="61" parent="24" name="bovino_pkey">
       <object-id>25712</object-id>
       <columns>id_bovino</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="59" parent="23" name="bovino_pkey">
+    <key id="62" parent="24" name="bovino_pkey">
       <object-id>25713</object-id>
       <columns>id_bovino</columns>
       <underlying-index>bovino_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <foreign-key id="60" parent="23" name="fk_ffba4n363bmgiqbjc7jwshdu8">
+    <foreign-key id="63" parent="24" name="fk_ffba4n363bmgiqbjc7jwshdu8">
       <object-id>25851</object-id>
       <columns>fazenda_idfazenda</columns>
       <ref-key>~.fazenda.fazenda_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="61" parent="23" name="fk_2de20ij4alfynmkumodpx0av8">
+    <foreign-key id="64" parent="24" name="fk_2de20ij4alfynmkumodpx0av8">
       <object-id>25856</object-id>
       <columns>pelagem_idpelagem</columns>
       <ref-key>~.pelagem.pelagem_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="62" parent="23" name="fk_tox0pknkjbfgynx8isx3c693k">
+    <foreign-key id="65" parent="24" name="fk_tox0pknkjbfgynx8isx3c693k">
       <object-id>25861</object-id>
       <columns>proprietario_idproprietario</columns>
       <ref-key>~.proprietario.proprietario_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="63" parent="23" name="fk_95tliuhe046jvb36u9fvile4t">
+    <foreign-key id="66" parent="24" name="fk_95tliuhe046jvb36u9fvile4t">
       <object-id>25866</object-id>
       <columns>raca_idraca</columns>
       <ref-key>~.raca.raca_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="64" parent="24" name="bovino_idbovino">
+    <foreign-key id="67" parent="24" name="fk_8va8mrgqd8871kxk70v6juh8b">
+      <object-id>25957</object-id>
+      <columns>ficha_matriz_idfichamatriz</columns>
+      <ref-key>~.ficha_matriz.ficha_matriz_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="68" parent="25" name="bovino_idbovino">
       <state-number>4183</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="65" parent="24" name="ecc_idecc">
+    <column id="69" parent="25" name="ecc_idecc">
       <state-number>4183</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="66" parent="24" name="uk_64segsfvmj4psqf29nrb56tq9">
+    <index id="70" parent="25" name="uk_64segsfvmj4psqf29nrb56tq9">
       <object-id>25839</object-id>
       <columns>ecc_idecc</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="67" parent="24" name="uk_64segsfvmj4psqf29nrb56tq9">
+    <key id="71" parent="25" name="uk_64segsfvmj4psqf29nrb56tq9">
       <object-id>25840</object-id>
       <columns>ecc_idecc</columns>
       <underlying-index>uk_64segsfvmj4psqf29nrb56tq9</underlying-index>
     </key>
-    <foreign-key id="68" parent="24" name="fk_aih7pmcvdloren9uopj34qblc">
+    <foreign-key id="72" parent="25" name="fk_aih7pmcvdloren9uopj34qblc">
       <object-id>25876</object-id>
       <columns>bovino_idbovino</columns>
       <ref-key>~.bovino.bovino_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="69" parent="24" name="fk_64segsfvmj4psqf29nrb56tq9">
+    <foreign-key id="73" parent="25" name="fk_64segsfvmj4psqf29nrb56tq9">
       <object-id>25871</object-id>
       <columns>ecc_idecc</columns>
       <ref-key>~.ecc.ecc_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="70" parent="25" name="bovino_idbovino">
+    <column id="74" parent="26" name="bovino_idbovino">
       <state-number>4184</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="71" parent="25" name="peso_idpeso">
+    <column id="75" parent="26" name="peso_idpeso">
       <state-number>4184</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="72" parent="25" name="uk_ikxswyrj5o4pvb4gsrc2aemcl">
+    <index id="76" parent="26" name="uk_ikxswyrj5o4pvb4gsrc2aemcl">
       <object-id>25841</object-id>
       <columns>peso_idpeso</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="73" parent="25" name="uk_ikxswyrj5o4pvb4gsrc2aemcl">
+    <key id="77" parent="26" name="uk_ikxswyrj5o4pvb4gsrc2aemcl">
       <object-id>25842</object-id>
       <columns>peso_idpeso</columns>
       <underlying-index>uk_ikxswyrj5o4pvb4gsrc2aemcl</underlying-index>
     </key>
-    <foreign-key id="74" parent="25" name="fk_nrwwpu9kri8o35rq4s0wmkt07">
+    <foreign-key id="78" parent="26" name="fk_nrwwpu9kri8o35rq4s0wmkt07">
       <object-id>25886</object-id>
       <columns>bovino_idbovino</columns>
       <ref-key>~.bovino.bovino_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="75" parent="25" name="fk_ikxswyrj5o4pvb4gsrc2aemcl">
+    <foreign-key id="79" parent="26" name="fk_ikxswyrj5o4pvb4gsrc2aemcl">
       <object-id>25881</object-id>
       <columns>peso_idpeso</columns>
       <ref-key>~.peso.peso_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="76" parent="26" name="id_diag_gest">
+    <column id="80" parent="27" name="id_diag_gest">
       <state-number>4185</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('diagnostico_gestacao_id_diag_gest_seq'::regclass)</default-expression>
     </column>
-    <column id="77" parent="26" name="data_diagnostico">
+    <column id="81" parent="27" name="data_diagnostico">
       <state-number>4185</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="78" parent="26" name="data_inclusao">
+    <column id="82" parent="27" name="data_inclusao">
       <state-number>4185</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="79" parent="26" name="status">
+    <column id="83" parent="27" name="status">
       <state-number>4185</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="80" parent="26" name="resultado_diag_gest_idresultado">
+    <column id="84" parent="27" name="resultado_diag_gest_idresultado">
       <state-number>4185</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="81" parent="26" name="diagnostico_gestacao_pkey">
+    <index id="85" parent="27" name="diagnostico_gestacao_pkey">
       <object-id>25726</object-id>
       <columns>id_diag_gest</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="82" parent="26" name="diagnostico_gestacao_pkey">
+    <key id="86" parent="27" name="diagnostico_gestacao_pkey">
       <object-id>25727</object-id>
       <columns>id_diag_gest</columns>
       <underlying-index>diagnostico_gestacao_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <foreign-key id="83" parent="26" name="fk_jec1dtnv6ntroi924hixocga4">
+    <foreign-key id="87" parent="27" name="fk_jec1dtnv6ntroi924hixocga4">
       <object-id>25891</object-id>
       <columns>resultado_diag_gest_idresultado</columns>
       <ref-key>~.resultado.resultado_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="84" parent="27" name="idecc">
+    <column id="88" parent="28" name="idecc">
       <state-number>4186</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('ecc_idecc_seq'::regclass)</default-expression>
     </column>
-    <column id="85" parent="27" name="data_inclusao">
+    <column id="89" parent="28" name="data_inclusao">
       <state-number>4186</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="86" parent="27" name="escore">
+    <column id="90" parent="28" name="escore">
       <state-number>4186</state-number>
       <data-type>integer|0</data-type>
     </column>
-    <column id="87" parent="27" name="status">
+    <column id="91" parent="28" name="status">
       <state-number>4186</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="88" parent="27" name="ecc_pkey">
+    <index id="92" parent="28" name="ecc_pkey">
       <object-id>25734</object-id>
       <columns>idecc</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="89" parent="27" name="ecc_pkey">
+    <key id="93" parent="28" name="ecc_pkey">
       <object-id>25735</object-id>
       <columns>idecc</columns>
       <underlying-index>ecc_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="90" parent="28" name="id_fazenda">
+    <column id="94" parent="29" name="id_fazenda">
       <state-number>4187</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('fazenda_id_fazenda_seq'::regclass)</default-expression>
     </column>
-    <column id="91" parent="28" name="data_inclusao">
+    <column id="95" parent="29" name="data_inclusao">
       <state-number>4187</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="92" parent="28" name="endereco_fazenda">
+    <column id="96" parent="29" name="endereco_fazenda">
       <state-number>4187</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="93" parent="28" name="nome_fazenda">
+    <column id="97" parent="29" name="nome_fazenda">
       <state-number>4187</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="94" parent="28" name="status">
+    <column id="98" parent="29" name="status">
       <state-number>4187</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="95" parent="28" name="fazenda_pkey">
+    <index id="99" parent="29" name="fazenda_pkey">
       <object-id>25745</object-id>
       <columns>id_fazenda</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="96" parent="28" name="fazenda_pkey">
+    <key id="100" parent="29" name="fazenda_pkey">
       <object-id>25746</object-id>
       <columns>id_fazenda</columns>
       <underlying-index>fazenda_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="97" parent="29" name="id_ficha_matriz">
+    <column id="101" parent="30" name="id_ficha_matriz">
       <state-number>4188</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('ficha_matriz_id_ficha_matriz_seq'::regclass)</default-expression>
     </column>
-    <column id="98" parent="29" name="data_inclusao">
+    <column id="102" parent="30" name="data_inclusao">
       <state-number>4188</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="99" parent="29" name="status">
+    <column id="103" parent="30" name="status">
       <state-number>4188</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="100" parent="29" name="bovino_idbovino">
+    <column id="104" parent="30" name="bovino_idbovino">
       <state-number>4188</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="101" parent="29" name="ficha_matriz_pkey">
+    <index id="105" parent="30" name="ficha_matriz_pkey">
       <object-id>25753</object-id>
       <columns>id_ficha_matriz</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="102" parent="29" name="ficha_matriz_pkey">
+    <key id="106" parent="30" name="ficha_matriz_pkey">
       <object-id>25754</object-id>
       <columns>id_ficha_matriz</columns>
       <underlying-index>ficha_matriz_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <foreign-key id="103" parent="29" name="fk_rndcpi4ji74wa0vy1syvlwrvk">
+    <foreign-key id="107" parent="30" name="fk_rndcpi4ji74wa0vy1syvlwrvk">
       <object-id>25896</object-id>
       <columns>bovino_idbovino</columns>
       <ref-key>~.bovino.bovino_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="104" parent="30" name="ficha_matriz_idfichamatriz">
-      <state-number>4189</state-number>
+    <column id="108" parent="31" name="ficha_matriz_idfichamatriz">
+      <state-number>4317</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="105" parent="30" name="diagnostico_gestacao_iddiaggest">
-      <state-number>4189</state-number>
+    <column id="109" parent="31" name="diagnostico_gestacao_iddiaggest">
+      <state-number>4317</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="106" parent="30" name="uk_aknttlgd8047qhmgxd5qee5i0">
-      <object-id>25843</object-id>
+    <index id="110" parent="31" name="uk_aknttlgd8047qhmgxd5qee5i0">
+      <object-id>26002</object-id>
       <columns>diagnostico_gestacao_iddiaggest</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="107" parent="30" name="uk_aknttlgd8047qhmgxd5qee5i0">
-      <object-id>25844</object-id>
+    <key id="111" parent="31" name="uk_aknttlgd8047qhmgxd5qee5i0">
+      <object-id>26003</object-id>
       <columns>diagnostico_gestacao_iddiaggest</columns>
       <underlying-index>uk_aknttlgd8047qhmgxd5qee5i0</underlying-index>
     </key>
-    <foreign-key id="108" parent="30" name="fk_l0gio8wu1yppecd48vxonlcrp">
-      <object-id>25906</object-id>
+    <foreign-key id="112" parent="31" name="fk_l0gio8wu1yppecd48vxonlcrp">
+      <object-id>26013</object-id>
       <columns>ficha_matriz_idfichamatriz</columns>
       <ref-key>~.ficha_matriz.ficha_matriz_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="109" parent="30" name="fk_aknttlgd8047qhmgxd5qee5i0">
-      <object-id>25901</object-id>
+    <foreign-key id="113" parent="31" name="fk_aknttlgd8047qhmgxd5qee5i0">
+      <object-id>26008</object-id>
       <columns>diagnostico_gestacao_iddiaggest</columns>
       <ref-key>~.diagnostico_gestacao.diagnostico_gestacao_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="110" parent="31" name="ficha_matriz_idfichamatriz">
-      <state-number>4190</state-number>
+    <column id="114" parent="32" name="ficha_matriz_idfichamatriz">
+      <state-number>4318</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="111" parent="31" name="inseminacao_idinseminacao">
-      <state-number>4190</state-number>
+    <column id="115" parent="32" name="inseminacao_idinseminacao">
+      <state-number>4318</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="112" parent="31" name="uk_2w3cb8w69r7d9yrwwrsgvfhf0">
-      <object-id>25845</object-id>
+    <index id="116" parent="32" name="uk_2w3cb8w69r7d9yrwwrsgvfhf0">
+      <object-id>26004</object-id>
       <columns>inseminacao_idinseminacao</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="113" parent="31" name="uk_2w3cb8w69r7d9yrwwrsgvfhf0">
-      <object-id>25846</object-id>
+    <key id="117" parent="32" name="uk_2w3cb8w69r7d9yrwwrsgvfhf0">
+      <object-id>26005</object-id>
       <columns>inseminacao_idinseminacao</columns>
       <underlying-index>uk_2w3cb8w69r7d9yrwwrsgvfhf0</underlying-index>
     </key>
-    <foreign-key id="114" parent="31" name="fk_92i2ih9acokjxmbxpyg49g2bk">
-      <object-id>25916</object-id>
+    <foreign-key id="118" parent="32" name="fk_92i2ih9acokjxmbxpyg49g2bk">
+      <object-id>26023</object-id>
       <columns>ficha_matriz_idfichamatriz</columns>
       <ref-key>~.ficha_matriz.ficha_matriz_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="115" parent="31" name="fk_2w3cb8w69r7d9yrwwrsgvfhf0">
-      <object-id>25911</object-id>
+    <foreign-key id="119" parent="32" name="fk_2w3cb8w69r7d9yrwwrsgvfhf0">
+      <object-id>26018</object-id>
       <columns>inseminacao_idinseminacao</columns>
       <ref-key>~.inseminacao.inseminacao_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="116" parent="32" name="ficha_matriz_idfichamatriz">
-      <state-number>4191</state-number>
+    <column id="120" parent="33" name="ficha_matriz_idfichamatriz">
+      <state-number>4319</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="117" parent="32" name="intervalo_parto_idintervaloparto">
-      <state-number>4191</state-number>
+    <column id="121" parent="33" name="intervalo_parto_idintervaloparto">
+      <state-number>4319</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="118" parent="32" name="uk_f5ncxlj3jouwqy71ajbvgube3">
-      <object-id>25847</object-id>
+    <index id="122" parent="33" name="uk_f5ncxlj3jouwqy71ajbvgube3">
+      <object-id>26006</object-id>
       <columns>intervalo_parto_idintervaloparto</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="119" parent="32" name="uk_f5ncxlj3jouwqy71ajbvgube3">
-      <object-id>25848</object-id>
+    <key id="123" parent="33" name="uk_f5ncxlj3jouwqy71ajbvgube3">
+      <object-id>26007</object-id>
       <columns>intervalo_parto_idintervaloparto</columns>
       <underlying-index>uk_f5ncxlj3jouwqy71ajbvgube3</underlying-index>
     </key>
-    <foreign-key id="120" parent="32" name="fk_c2f9vmco6wstnriw4fajl92ml">
-      <object-id>25926</object-id>
+    <foreign-key id="124" parent="33" name="fk_c2f9vmco6wstnriw4fajl92ml">
+      <object-id>26033</object-id>
       <columns>ficha_matriz_idfichamatriz</columns>
       <ref-key>~.ficha_matriz.ficha_matriz_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="121" parent="32" name="fk_f5ncxlj3jouwqy71ajbvgube3">
-      <object-id>25921</object-id>
+    <foreign-key id="125" parent="33" name="fk_f5ncxlj3jouwqy71ajbvgube3">
+      <object-id>26028</object-id>
       <columns>intervalo_parto_idintervaloparto</columns>
       <ref-key>~.intervalo_parto.intervalo_parto_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="122" parent="33" name="id_inseminacao">
+    <column id="126" parent="34" name="id_inseminacao">
       <state-number>4192</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('inseminacao_id_inseminacao_seq'::regclass)</default-expression>
     </column>
-    <column id="123" parent="33" name="data_da_inseminacao">
+    <column id="127" parent="34" name="data_da_inseminacao">
       <state-number>4192</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="124" parent="33" name="data_inclusao">
+    <column id="128" parent="34" name="data_inclusao">
       <state-number>4192</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="125" parent="33" name="monta">
+    <column id="129" parent="34" name="monta">
       <state-number>4192</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="126" parent="33" name="previsao_parto">
+    <column id="130" parent="34" name="previsao_parto">
       <state-number>4192</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="127" parent="33" name="status">
+    <column id="131" parent="34" name="status">
       <state-number>4192</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <column id="128" parent="33" name="inseminador_idinseminador">
+    <column id="132" parent="34" name="inseminador_idinseminador">
       <state-number>4192</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="129" parent="33" name="parto_idparto">
+    <column id="133" parent="34" name="parto_idparto">
       <state-number>4192</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="130" parent="33" name="touro_idbovino">
+    <column id="134" parent="34" name="touro_idbovino">
       <state-number>4192</state-number>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="131" parent="33" name="inseminacao_pkey">
+    <index id="135" parent="34" name="inseminacao_pkey">
       <object-id>25770</object-id>
       <columns>id_inseminacao</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="132" parent="33" name="inseminacao_pkey">
+    <key id="136" parent="34" name="inseminacao_pkey">
       <object-id>25771</object-id>
       <columns>id_inseminacao</columns>
       <underlying-index>inseminacao_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <foreign-key id="133" parent="33" name="fk_qhiwnliitwkemga6y2qdqae0b">
+    <foreign-key id="137" parent="34" name="fk_qhiwnliitwkemga6y2qdqae0b">
       <object-id>25931</object-id>
       <columns>inseminador_idinseminador</columns>
       <ref-key>~.inseminador.inseminador_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="134" parent="33" name="fk_elho6udi3h5gc50bm055w1973">
+    <foreign-key id="138" parent="34" name="fk_elho6udi3h5gc50bm055w1973">
       <object-id>25936</object-id>
       <columns>parto_idparto</columns>
       <ref-key>~.parto.parto_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="135" parent="33" name="fk_1uyi95tmfhhhxr5t779j6mut1">
+    <foreign-key id="139" parent="34" name="fk_1uyi95tmfhhhxr5t779j6mut1">
       <object-id>25941</object-id>
       <columns>touro_idbovino</columns>
       <ref-key>~.bovino.bovino_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="136" parent="34" name="id_inseminador">
+    <column id="140" parent="35" name="id_inseminador">
       <state-number>4193</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('inseminador_id_inseminador_seq'::regclass)</default-expression>
     </column>
-    <column id="137" parent="34" name="data_inclusao">
+    <column id="141" parent="35" name="data_inclusao">
       <state-number>4193</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="138" parent="34" name="nome_inseminador">
+    <column id="142" parent="35" name="nome_inseminador">
       <state-number>4193</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="139" parent="34" name="status">
+    <column id="143" parent="35" name="status">
       <state-number>4193</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="140" parent="34" name="inseminador_pkey">
+    <index id="144" parent="35" name="inseminador_pkey">
       <object-id>25778</object-id>
       <columns>id_inseminador</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="141" parent="34" name="inseminador_pkey">
+    <key id="145" parent="35" name="inseminador_pkey">
       <object-id>25779</object-id>
       <columns>id_inseminador</columns>
       <underlying-index>inseminador_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="142" parent="35" name="id_intervalo_parto">
+    <column id="146" parent="36" name="id_intervalo_parto">
       <state-number>4194</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('intervalo_parto_id_intervalo_parto_seq'::regclass)</default-expression>
     </column>
-    <column id="143" parent="35" name="data_inclusao">
+    <column id="147" parent="36" name="data_inclusao">
       <state-number>4194</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="144" parent="35" name="intervalo">
+    <column id="148" parent="36" name="intervalo">
       <state-number>4194</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
     </column>
-    <column id="145" parent="35" name="status">
+    <column id="149" parent="36" name="status">
       <state-number>4194</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="146" parent="35" name="intervalo_parto_pkey">
+    <index id="150" parent="36" name="intervalo_parto_pkey">
       <object-id>25786</object-id>
       <columns>id_intervalo_parto</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="147" parent="35" name="intervalo_parto_pkey">
+    <key id="151" parent="36" name="intervalo_parto_pkey">
       <object-id>25787</object-id>
       <columns>id_intervalo_parto</columns>
       <underlying-index>intervalo_parto_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="148" parent="36" name="id_parto">
+    <column id="152" parent="37" name="id_parto">
       <state-number>4195</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('parto_id_parto_seq'::regclass)</default-expression>
     </column>
-    <column id="149" parent="36" name="data_inclusao">
+    <column id="153" parent="37" name="data_inclusao">
       <state-number>4195</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="150" parent="36" name="data_parto">
+    <column id="154" parent="37" name="data_parto">
       <state-number>4195</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="151" parent="36" name="status">
+    <column id="155" parent="37" name="status">
       <state-number>4195</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="152" parent="36" name="parto_pkey">
+    <index id="156" parent="37" name="parto_pkey">
       <object-id>25794</object-id>
       <columns>id_parto</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="153" parent="36" name="parto_pkey">
+    <key id="157" parent="37" name="parto_pkey">
       <object-id>25795</object-id>
       <columns>id_parto</columns>
       <underlying-index>parto_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="154" parent="37" name="parto_idparto">
+    <column id="158" parent="38" name="parto_idparto">
       <state-number>4196</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <column id="155" parent="37" name="bovino_parto_idbovino">
+    <column id="159" parent="38" name="bovino_parto_idbovino">
       <state-number>4196</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
     </column>
-    <index id="156" parent="37" name="uk_haxjp1v7t6rsbtljng7lhaq7y">
+    <index id="160" parent="38" name="uk_haxjp1v7t6rsbtljng7lhaq7y">
       <object-id>25849</object-id>
       <columns>bovino_parto_idbovino</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="157" parent="37" name="uk_haxjp1v7t6rsbtljng7lhaq7y">
+    <key id="161" parent="38" name="uk_haxjp1v7t6rsbtljng7lhaq7y">
       <object-id>25850</object-id>
       <columns>bovino_parto_idbovino</columns>
       <underlying-index>uk_haxjp1v7t6rsbtljng7lhaq7y</underlying-index>
     </key>
-    <foreign-key id="158" parent="37" name="fk_57vltwj24cy9ns3jtnwb6vtyf">
+    <foreign-key id="162" parent="38" name="fk_57vltwj24cy9ns3jtnwb6vtyf">
       <object-id>25951</object-id>
       <columns>parto_idparto</columns>
       <ref-key>~.parto.parto_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="159" parent="37" name="fk_haxjp1v7t6rsbtljng7lhaq7y">
+    <foreign-key id="163" parent="38" name="fk_haxjp1v7t6rsbtljng7lhaq7y">
       <object-id>25946</object-id>
       <columns>bovino_parto_idbovino</columns>
       <ref-key>~.bovino.bovino_pkey</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="160" parent="38" name="id_pelagem">
+    <column id="164" parent="39" name="id_pelagem">
       <state-number>4197</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('pelagem_id_pelagem_seq'::regclass)</default-expression>
     </column>
-    <column id="161" parent="38" name="data_inclusao">
+    <column id="165" parent="39" name="data_inclusao">
       <state-number>4197</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="162" parent="38" name="nome_pelagem">
+    <column id="166" parent="39" name="nome_pelagem">
       <state-number>4197</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="163" parent="38" name="status">
+    <column id="167" parent="39" name="status">
       <state-number>4197</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="164" parent="38" name="pelagem_pkey">
+    <index id="168" parent="39" name="pelagem_pkey">
       <object-id>25805</object-id>
       <columns>id_pelagem</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="165" parent="38" name="pelagem_pkey">
+    <key id="169" parent="39" name="pelagem_pkey">
       <object-id>25806</object-id>
       <columns>id_pelagem</columns>
       <underlying-index>pelagem_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="166" parent="39" name="id_peso">
+    <column id="170" parent="40" name="id_peso">
       <state-number>4198</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('peso_id_peso_seq'::regclass)</default-expression>
     </column>
-    <column id="167" parent="39" name="data_inclusao">
+    <column id="171" parent="40" name="data_inclusao">
       <state-number>4198</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="168" parent="39" name="data_pesagem">
+    <column id="172" parent="40" name="data_pesagem">
       <state-number>4198</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="169" parent="39" name="peso">
+    <column id="173" parent="40" name="peso">
       <state-number>4198</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="170" parent="39" name="status">
+    <column id="174" parent="40" name="status">
       <state-number>4198</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="171" parent="39" name="peso_pkey">
+    <index id="175" parent="40" name="peso_pkey">
       <object-id>25813</object-id>
       <columns>id_peso</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="172" parent="39" name="peso_pkey">
+    <key id="176" parent="40" name="peso_pkey">
       <object-id>25814</object-id>
       <columns>id_peso</columns>
       <underlying-index>peso_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="173" parent="40" name="id_proprietario">
+    <column id="177" parent="41" name="id_proprietario">
       <state-number>4199</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('proprietario_id_proprietario_seq'::regclass)</default-expression>
     </column>
-    <column id="174" parent="40" name="data_inclusao">
+    <column id="178" parent="41" name="data_inclusao">
       <state-number>4199</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="175" parent="40" name="nome_proprietario">
+    <column id="179" parent="41" name="nome_proprietario">
       <state-number>4199</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="176" parent="40" name="status">
+    <column id="180" parent="41" name="status">
       <state-number>4199</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="177" parent="40" name="proprietario_pkey">
+    <index id="181" parent="41" name="proprietario_pkey">
       <object-id>25821</object-id>
       <columns>id_proprietario</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="178" parent="40" name="proprietario_pkey">
+    <key id="182" parent="41" name="proprietario_pkey">
       <object-id>25822</object-id>
       <columns>id_proprietario</columns>
       <underlying-index>proprietario_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="179" parent="41" name="id_raca">
+    <column id="183" parent="42" name="id_raca">
       <state-number>4200</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('raca_id_raca_seq'::regclass)</default-expression>
     </column>
-    <column id="180" parent="41" name="data_inclusao">
+    <column id="184" parent="42" name="data_inclusao">
       <state-number>4200</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="181" parent="41" name="nome_raca">
+    <column id="185" parent="42" name="nome_raca">
       <state-number>4200</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="182" parent="41" name="status">
+    <column id="186" parent="42" name="status">
       <state-number>4200</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="183" parent="41" name="raca_pkey">
+    <index id="187" parent="42" name="raca_pkey">
       <object-id>25829</object-id>
       <columns>id_raca</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="184" parent="41" name="raca_pkey">
+    <key id="188" parent="42" name="raca_pkey">
       <object-id>25830</object-id>
       <columns>id_raca</columns>
       <underlying-index>raca_pkey</underlying-index>
       <primary>1</primary>
     </key>
-    <column id="185" parent="42" name="id_resultado">
+    <column id="189" parent="43" name="id_resultado">
       <state-number>4201</state-number>
       <mandatory>1</mandatory>
       <data-type>bigint|0</data-type>
       <default-expression>nextval('resultado_id_resultado_seq'::regclass)</default-expression>
     </column>
-    <column id="186" parent="42" name="data_inclusao">
+    <column id="190" parent="43" name="data_inclusao">
       <state-number>4201</state-number>
       <data-type>timestamp|0</data-type>
     </column>
-    <column id="187" parent="42" name="resultado">
+    <column id="191" parent="43" name="resultado">
       <state-number>4201</state-number>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="188" parent="42" name="status">
+    <column id="192" parent="43" name="status">
       <state-number>4201</state-number>
       <data-type>boolean|0</data-type>
     </column>
-    <index id="189" parent="42" name="resultado_pkey">
+    <index id="193" parent="43" name="resultado_pkey">
       <object-id>25837</object-id>
       <columns>id_resultado</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="190" parent="42" name="resultado_pkey">
+    <key id="194" parent="43" name="resultado_pkey">
       <object-id>25838</object-id>
       <columns>id_resultado</columns>
       <underlying-index>resultado_pkey</underlying-index>
       <primary>1</primary>
     </key>
+    <column id="195" parent="44" name="id_tarefa">
+      <state-number>4310</state-number>
+      <mandatory>1</mandatory>
+      <data-type>bigint|0</data-type>
+      <default-expression>nextval('tarefa_id_tarefa_seq'::regclass)</default-expression>
+    </column>
+    <column id="196" parent="44" name="dara_inclusao">
+      <state-number>4310</state-number>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="197" parent="44" name="data_conclusao">
+      <state-number>4310</state-number>
+      <data-type>timestamp|0</data-type>
+    </column>
+    <column id="198" parent="44" name="identificacao_smartfone">
+      <state-number>4310</state-number>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="199" parent="44" name="status">
+      <state-number>4310</state-number>
+      <mandatory>1</mandatory>
+      <data-type>boolean|0</data-type>
+    </column>
+    <column id="200" parent="44" name="status_da_tarefa">
+      <state-number>4310</state-number>
+      <mandatory>1</mandatory>
+      <data-type>boolean|0</data-type>
+    </column>
+    <column id="201" parent="44" name="tipo_tarefa">
+      <state-number>4310</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="202" parent="44" name="bovino_matriz_idbovino">
+      <state-number>4310</state-number>
+      <data-type>bigint|0</data-type>
+    </column>
+    <index id="203" parent="44" name="tarefa_pkey">
+      <object-id>25986</object-id>
+      <columns>id_tarefa</columns>
+      <desc-columns />
+      <unique>1</unique>
+    </index>
+    <key id="204" parent="44" name="tarefa_pkey">
+      <object-id>25987</object-id>
+      <columns>id_tarefa</columns>
+      <underlying-index>tarefa_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="205" parent="44" name="fk_rig2avxi9s2re4qpdx6rlfd76">
+      <object-id>25988</object-id>
+      <columns>bovino_matriz_idbovino</columns>
+      <ref-key>~.bovino.bovino_pkey</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
   </database-model>
 </dataSource>

@@ -1,6 +1,7 @@
 package com.magossi.apisimb.domain.bovino;
 
 import com.fasterxml.jackson.annotation.*;
+import com.magossi.apisimb.domain.matriz.FichaMatriz;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -27,7 +28,6 @@ public class Bovino implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String nomeBovino;
 
-
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Boolean genero;
 
@@ -39,9 +39,6 @@ public class Bovino implements Serializable {
 
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-//    @JsonFormat(shape=JsonFormat.Shape.STRING,
-//                pattern = "dd/MM/yyyy hh:mm:ss",
-//                locale = "pt-BR", timezone = "America/Cuiaba")
     private Date dataNascimento;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -67,6 +64,10 @@ public class Bovino implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Peso> peso;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL )
+    @OneToOne(cascade = CascadeType.ALL)
+    private FichaMatriz fichaMatriz;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String urlFoto;
@@ -189,6 +190,14 @@ public class Bovino implements Serializable {
         this.peso = peso;
     }
 
+    public FichaMatriz getFichaMatriz() {
+        return fichaMatriz;
+    }
+
+    public void setFichaMatriz(FichaMatriz fichaMatriz) {
+        this.fichaMatriz = fichaMatriz;
+    }
+
     public String getUrlFoto() {
         return urlFoto;
     }
@@ -212,6 +221,4 @@ public class Bovino implements Serializable {
     public void setStatus(Boolean status) {
         this.status = status;
     }
-
-
 }
