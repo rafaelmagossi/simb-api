@@ -24,8 +24,7 @@ public class Inseminacao {
     private Boolean monta;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @OneToOne
-    private Bovino touro;
+    private String touro;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date dataDaInseminacao;
@@ -65,11 +64,11 @@ public class Inseminacao {
         this.monta = monta;
     }
 
-    public Bovino getTouro() {
+    public String getTouro() {
         return touro;
     }
 
-    public void setTouro(Bovino touro) {
+    public void setTouro(String touro) {
         this.touro = touro;
     }
 

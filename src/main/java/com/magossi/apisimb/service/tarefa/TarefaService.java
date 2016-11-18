@@ -3,6 +3,7 @@ package com.magossi.apisimb.service.tarefa;
 import com.magossi.apisimb.domain.tarefa.Tarefa;
 import com.magossi.apisimb.repository.tarefa.TarefaRepository;
 import com.magossi.apisimb.service.exceptions.BovinoExistenteException;
+import com.magossi.apisimb.service.exceptions.BovinoNaoExistenteException;
 import com.magossi.apisimb.service.exceptions.EccNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,6 +39,16 @@ public class TarefaService {
         if(tarefas==null){
             throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
         }
+        return tarefas;
+    }
+
+    public List<Tarefa> buscarImei(String imei){
+        List<Tarefa> tarefas = tarefaRepository.findByImei(imei);
+
+        if(tarefas==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+
         return tarefas;
     }
 }

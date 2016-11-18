@@ -31,10 +31,10 @@ public class Tarefa implements Serializable {
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private Date daraInclusao = new Date();
+    private Date dataInclusao = new Date();
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String identificacaoSmartfone;
+    private String imei;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private boolean statusDaTarefa;
@@ -66,12 +66,12 @@ public class Tarefa implements Serializable {
         this.bovinoMatriz = bovinoMatriz;
     }
 
-    public Date getDaraInclusao() {
-        return daraInclusao;
+    public Date getDataInclusao() {
+        return dataInclusao;
     }
 
-    public void setDaraInclusao(Date daraInclusao) {
-        this.daraInclusao = daraInclusao;
+    public void setDataInclusao(Date dataInclusao) {
+        this.dataInclusao = dataInclusao;
     }
 
     public Date getDataConclusao() {
@@ -106,11 +106,11 @@ public class Tarefa implements Serializable {
         this.tipoTarefa = tipoTarefa;
     }
 
-    public String getIdentificacaoSmartfone() {
-        return identificacaoSmartfone;
+    public String getImei() {
+        return imei;
     }
 
-    public void setIdentificacaoSmartfone(String identificacaoSmartfone) {
-        this.identificacaoSmartfone = identificacaoSmartfone;
+    public void setImei(String imei) {
+        this.imei = imei;
     }
 }
