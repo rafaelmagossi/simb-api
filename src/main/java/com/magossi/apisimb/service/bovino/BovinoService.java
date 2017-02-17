@@ -78,6 +78,15 @@ public class BovinoService {
         return bovino;
     }
 
+    public List<Bovino> buscarTodosAtivos(){
+        List<Bovino> bovino = bovinoRepository.findByStatus(true);
+
+        if(bovino==null){
+            throw new BovinoNaoEncontradoException("Lista de Bovinos não Encontrada");
+        }
+        return bovino;
+    }
+
 
 
 //

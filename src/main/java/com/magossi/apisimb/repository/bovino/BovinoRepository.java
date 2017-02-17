@@ -21,6 +21,7 @@ public interface BovinoRepository extends JpaRepository<Bovino, Long>{
         List<Bovino> findByProprietario(Proprietario proprietario);
         List<Bovino> findByDataNascimento(Date data);
         List<Bovino> findByPeso(Peso peso);
+        List<Bovino> findByStatus(Boolean status);
 
 
 }

@@ -92,6 +92,12 @@ public class BovinoResources {
         List<Bovino> bovino = bovinoService.buscarTodos();
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
     }
+    @RequestMapping(value = "/ativos", method = RequestMethod.GET)
+    public ResponseEntity<List<Bovino>> listarAtivos(){
+
+        List<Bovino> bovino = bovinoService.buscarTodosAtivos();
+        return ResponseEntity.status(HttpStatus.OK).body(bovino);
+    }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Bovino> buscarBovinoPorId(@PathVariable("id") Long id){   //? encapsula qualquer tipo de objeto
