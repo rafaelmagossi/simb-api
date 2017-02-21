@@ -13,7 +13,7 @@ public interface BovinoRepository extends JpaRepository<Bovino, Long>{
 
         Bovino findByTag(String tag);
         //Bovino findByNomeBovino(String nome);
-        List<Bovino> findByNomeBovino(String nome);
+        List<Bovino> findByNomeBovinoContaining(String nome);
         List<Bovino> findByPai(String pai);
         List<Bovino> findByMaeContaining(String mae);
         List<Bovino> findByRaca(Raca raca);

@@ -116,8 +116,15 @@ public class BovinoResources {
 
     @RequestMapping(value = "/nome/{nome}", method = RequestMethod.GET)
     public ResponseEntity<List<Bovino>> buscarBovinoPorNome(@PathVariable("nome")String nome){
+        List<Bovino> bovino = null;
 
-        List<Bovino> bovino = bovinoService.buscarNomeBovino(nome);
+        if("todos".equals(nome)){
+            bovino = bovinoService.buscarTodos();
+        }else{
+            bovino = bovinoService.buscarNomeBovino(nome);
+        }
+
+
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
 
     }
