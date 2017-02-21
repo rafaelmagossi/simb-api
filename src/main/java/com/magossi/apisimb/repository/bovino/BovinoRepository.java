@@ -12,9 +12,10 @@ import java.util.List;
 public interface BovinoRepository extends JpaRepository<Bovino, Long>{
 
         Bovino findByTag(String tag);
-        Bovino findByNomeBovino(String nome);
+        //Bovino findByNomeBovino(String nome);
+        List<Bovino> findByNomeBovino(String nome);
         List<Bovino> findByPai(String pai);
-        List<Bovino> findByMae(String mae);
+        List<Bovino> findByMaeContaining(String mae);
         List<Bovino> findByRaca(Raca raca);
         List<Bovino> findByPelagem(Pelagem pelagem);
         List<Bovino> findByFazenda(Fazenda fazenda);

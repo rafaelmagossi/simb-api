@@ -114,6 +114,22 @@ public class BovinoResources {
 
     }
 
+    @RequestMapping(value = "/nome/{nome}", method = RequestMethod.GET)
+    public ResponseEntity<List<Bovino>> buscarBovinoPorNome(@PathVariable("nome")String nome){
+
+        List<Bovino> bovino = bovinoService.buscarNomeBovino(nome);
+        return ResponseEntity.status(HttpStatus.OK).body(bovino);
+
+    }
+
+    @RequestMapping(value = "/mae/{mae}", method = RequestMethod.GET)
+    public ResponseEntity<List<Bovino>> buscarBovinoPorMae(@PathVariable("mae")String mae){
+
+        List<Bovino> bovino = bovinoService.buscarMae(mae);
+        return ResponseEntity.status(HttpStatus.OK).body(bovino);
+
+    }
+
 
 
 }

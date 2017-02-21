@@ -60,6 +60,26 @@ public class BovinoService {
         return bovino;
     }
 
+    public List<Bovino> buscarNomeBovino(String nome){
+        List<Bovino> bovino = bovinoRepository.findByNomeBovino(nome);
+
+        if(bovino==null){
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return bovino;
+    }
+
+    public List<Bovino> buscarMae(String mae){
+        List<Bovino> bovino = bovinoRepository.findByMaeContaining(mae);
+
+        if(bovino==null){
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return bovino;
+    }
+
     public Bovino buscarId(Long id){
         Bovino bovino = bovinoRepository.findOne(id);
 
