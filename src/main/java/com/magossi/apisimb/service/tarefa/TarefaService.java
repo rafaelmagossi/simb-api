@@ -9,6 +9,7 @@ import com.magossi.apisimb.service.exceptions.EccNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -54,12 +55,52 @@ public class TarefaService {
         return tarefa;
     }
 
-    public List<Tarefa> buscarTodos(){
+    public List<Tarefa> buscarTodas(){
         List<Tarefa> tarefas = tarefaRepository.findAll();
 
         if(tarefas==null){
             throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
         }
+        return tarefas;
+    }
+
+    public List<Tarefa> buscarTodasAtivas(){
+        List<Tarefa> tarefas = tarefaRepository.findByStatusDaTarefaOrderByDataInclusaoAsc(false);
+
+        if(tarefas==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+
+        return tarefas;
+    }
+
+    public List<Tarefa> buscarTodasConcluidas(){
+        List<Tarefa> tarefas = tarefaRepository.findByStatusDaTarefaOrderByDataInclusaoAsc(true);
+
+        if(tarefas==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+
+        return tarefas;
+    }
+
+    public List<Tarefa> buscarAtivasData(Date data){
+        List<Tarefa> tarefas = tarefaRepository.findByDataInclusaoContainingAndStatusDaTarefaOrderByDataInclusaoAsc(data,false);
+
+        if(tarefas==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+
+        return tarefas;
+    }
+
+    public List<Tarefa> buscarConcluidasData(Date data){
+        List<Tarefa> tarefas = tarefaRepository.findByDataInclusaoContainingAndStatusDaTarefaOrderByDataInclusaoAsc(data,true);
+
+        if(tarefas==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+
         return tarefas;
     }
 

@@ -12,6 +12,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.constraints.AssertFalse;
 import java.net.URI;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -61,15 +64,79 @@ public class TarefaResource {
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Tarefa>> listar(){
 
-        List<Tarefa> tarefas = tarefaService.buscarTodos();
+        List<Tarefa> tarefas = tarefaService.buscarTodas();
+        return ResponseEntity.status(HttpStatus.OK).body(tarefas);
+    }
+
+    @RequestMapping(value = "/ativas", method = RequestMethod.GET)
+    public ResponseEntity<List<Tarefa>> listarAtivas(){
+
+        List<Tarefa> tarefas = tarefaService.buscarTodasAtivas();
+        return ResponseEntity.status(HttpStatus.OK).body(tarefas);
+    }
+
+    @RequestMapping(value = "/concluidas", method = RequestMethod.GET)
+    public ResponseEntity<List<Tarefa>> listarConcluidas(){
+
+        List<Tarefa> tarefas = tarefaService.buscarTodasConcluidas();
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
     }
 
     @RequestMapping(value = "/imei/{imei}", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> buscarBovinoPorTag(@PathVariable("imei")String imei){
+    public ResponseEntity<List<Tarefa>> buscarTarefaPorImei(@PathVariable("imei")String imei){
 
         List<Tarefa> tarefas = tarefaService.buscarImei(imei);
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
 
+    }
+
+    @RequestMapping(value = "/dataAtivas/{data}", method = RequestMethod.GET)
+    public ResponseEntity<List<Tarefa>> buscarTarefaAtivasPorData(@PathVariable("data")String dataString) throws Exception {
+
+
+
+        List<Tarefa> tarefas = null;
+
+        if("todos".equals(dataString)){
+            tarefas = tarefaService.buscarTodasAtivas();
+        }else{
+            Date data = formataStringToDate(dataString);
+            tarefas = tarefaService.buscarAtivasData(data);
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(tarefas);
+
+    }
+
+    @RequestMapping(value = "/dataConcluidas/{data}", method = RequestMethod.GET)
+    public ResponseEntity<List<Tarefa>> buscarTarefaConcluidasPorData(@PathVariable("data")String dataString) throws Exception {
+
+
+
+        List<Tarefa> tarefas = null;
+
+        if("todos".equals(dataString)){
+            tarefas = tarefaService.buscarTodasConcluidas();
+        }else{
+            Date data = formataStringToDate(dataString);
+            tarefas = tarefaService.buscarConcluidasData(data);
+        }
+
+
+        return ResponseEntity.status(HttpStatus.OK).body(tarefas);
+
+    }
+
+    public static Date formataStringToDate(String data) throws Exception {
+        if (data == null || data.equals(""))
+            return null;
+        Date date = null;
+        try {
+            DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            date = (java.util.Date)formatter.parse(data);
+        } catch (ParseException e) {
+            throw e;
+        }
+        return date;
     }
 }

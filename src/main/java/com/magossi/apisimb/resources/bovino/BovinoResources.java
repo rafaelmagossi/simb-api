@@ -44,11 +44,21 @@ public class BovinoResources {
         return ResponseEntity.created(uri).build();
     }
 
+    @RequestMapping(method =  RequestMethod.PUT)
+    public ResponseEntity<Void> alterar(@RequestBody Bovino bovino){
+        bovino = bovinoService.alterar(bovino);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
+
     @RequestMapping(value = "/{id}/ecc", method =  RequestMethod.POST)
     public ResponseEntity<Void> salvarEccBovino(@PathVariable("id") Long id, @RequestBody Ecc ecc){
         Bovino bovino = bovinoService.buscarId(id);
         bovino.getEcc().add(ecc);
-        bovino = bovinoService.salvar(bovino);
+        bovino = bovinoService.alterar(bovino);
 
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -61,7 +71,7 @@ public class BovinoResources {
     public ResponseEntity<Void> salvarPesoBovino(@PathVariable("id") Long id, @RequestBody Peso peso){
         Bovino bovino = bovinoService.buscarId(id);
         bovino.getPeso().add(peso);
-        bovino = bovinoService.salvar(bovino);
+        bovino = bovinoService.alterar(bovino);
 
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -74,7 +84,7 @@ public class BovinoResources {
     public ResponseEntity<Void> salvarFichaMatrizBovino(@PathVariable("id") Long id, @RequestBody FichaMatriz fichaMatriz){
         Bovino bovino = bovinoService.buscarId(id);
         bovino.setFichaMatriz(new FichaMatriz());
-        bovino = bovinoService.salvar(bovino);
+        bovino = bovinoService.alterar(bovino);
 
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -119,7 +129,7 @@ public class BovinoResources {
         List<Bovino> bovino = null;
 
         if("todos".equals(nome)){
-            bovino = bovinoService.buscarTodos();
+            bovino = bovinoService.buscarTodosAtivos();
         }else{
             bovino = bovinoService.buscarNomeBovino(nome);
         }

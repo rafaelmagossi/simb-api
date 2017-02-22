@@ -50,6 +50,13 @@ public class BovinoService {
 
     }
 
+
+    public Bovino alterar(Bovino bovino){
+
+        return bovinoRepository.save(bovino);
+
+    }
+
     public Bovino buscarTag(String tag){
         Bovino bovino = bovinoRepository.findByTag(tag);
 
@@ -61,7 +68,7 @@ public class BovinoService {
     }
 
     public List<Bovino> buscarNomeBovino(String nome){
-        List<Bovino> bovino = bovinoRepository.findByNomeBovinoContaining(nome);
+        List<Bovino> bovino = bovinoRepository.findByNomeBovinoContainingAndStatus(nome,true);
 
         if(bovino==null){
             throw new BovinoNaoExistenteException("Bovino não Existe");
