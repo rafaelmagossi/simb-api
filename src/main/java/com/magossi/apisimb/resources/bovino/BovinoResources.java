@@ -32,6 +32,20 @@ public class BovinoResources {
     @Autowired
     public EccService eccService;
 
+
+
+   // ******************************** METODOS PUT *******************************************************
+
+    @RequestMapping(method =  RequestMethod.PUT)
+    public ResponseEntity<Void> alterar(@RequestBody Bovino bovino){
+        bovino = bovinoService.alterar(bovino);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
+
     // ******************************** METODOS POST *******************************************************
 
     @RequestMapping(method =  RequestMethod.POST)
@@ -44,15 +58,6 @@ public class BovinoResources {
         return ResponseEntity.created(uri).build();
     }
 
-    @RequestMapping(method =  RequestMethod.PUT)
-    public ResponseEntity<Void> alterar(@RequestBody Bovino bovino){
-        bovino = bovinoService.alterar(bovino);
-
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();
-
-        return ResponseEntity.created(uri).build();
-    }
 
     @RequestMapping(value = "/{id}/ecc", method =  RequestMethod.POST)
     public ResponseEntity<Void> salvarEccBovino(@PathVariable("id") Long id, @RequestBody Ecc ecc){

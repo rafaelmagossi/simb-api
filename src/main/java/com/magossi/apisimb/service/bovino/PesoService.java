@@ -1,10 +1,13 @@
 package com.magossi.apisimb.service.bovino;
 
+import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.bovino.Peso;
+import com.magossi.apisimb.repository.bovino.BovinoRepository;
 import com.magossi.apisimb.repository.bovino.PesoRepository;
 import com.magossi.apisimb.service.exceptions.PesoExistenteException;
 import com.magossi.apisimb.service.exceptions.PesoNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +23,9 @@ public class PesoService {
     @Autowired
     PesoRepository pesoRepository;
 
+    @Autowired
+    BovinoRepository bovinoRepository;
+
 
     public Peso salvar(Peso peso){
         if(peso.getIdPeso() != null){
@@ -31,6 +37,24 @@ public class PesoService {
         }
         return pesoRepository.save(peso);
     }
+
+
+
+
+    public void deletar(Long id) {
+        try {
+            Peso peso = pesoRepository.findOne(id);
+            Bovino bovino = bovinoRepository.findByPeso(peso);
+            bovino.getPeso().remove(peso);
+            bovinoRepository.save(bovino);
+            pesoRepository.delete(peso);
+
+        } catch (EmptyResultDataAccessException e) {
+            throw new PesoNaoEncontradoException("O Ecc não pode ser Encontrado");
+        }
+    }
+
+
 
     public List<Peso> listar(){
         List<Peso> pesos = pesoRepository.findAll();

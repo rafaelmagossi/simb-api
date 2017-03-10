@@ -58,7 +58,7 @@ public class Bovino implements Serializable {
     private Proprietario proprietario;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Ecc> ecc;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)

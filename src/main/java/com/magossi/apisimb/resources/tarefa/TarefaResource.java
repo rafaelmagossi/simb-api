@@ -3,6 +3,7 @@ package com.magossi.apisimb.resources.tarefa;
 import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.matriz.Inseminacao;
 import com.magossi.apisimb.domain.tarefa.Tarefa;
+import com.magossi.apisimb.service.bovino.BovinoService;
 import com.magossi.apisimb.service.tarefa.TarefaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,9 +32,23 @@ public class TarefaResource {
     @Autowired
     public TarefaService tarefaService;
 
+    @Autowired
+    public BovinoService bovinoService;
+
+
     @RequestMapping(method =  RequestMethod.POST)
     public ResponseEntity<Void> salvar(@RequestBody Tarefa tarefa){
         tarefa = tarefaService.salvar(tarefa);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(tarefa.getIdTarefa()).toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
+
+    @RequestMapping(method =  RequestMethod.PUT)
+    public ResponseEntity<Void> alterar(@RequestBody Tarefa tarefa){
+        tarefa = tarefaService.alterar(tarefa);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(tarefa.getIdTarefa()).toUri();
@@ -86,6 +101,14 @@ public class TarefaResource {
     public ResponseEntity<List<Tarefa>> buscarTarefaPorImei(@PathVariable("imei")String imei){
 
         List<Tarefa> tarefas = tarefaService.buscarImei(imei);
+        return ResponseEntity.status(HttpStatus.OK).body(tarefas);
+
+    }
+
+    @RequestMapping(value = "/bovinoMatriz/{idBovino}", method = RequestMethod.GET)
+    public ResponseEntity<List<Tarefa>> buscarTarefasPorBovinoMatriz(@PathVariable("idBovino")Long idBovino){
+        Bovino bovino = bovinoService.buscarId(idBovino);
+        List<Tarefa> tarefas = tarefaService.buscarPorBovinoMatriz(bovino);
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
 
     }
