@@ -26,6 +26,18 @@ public class EccResources {
 
 
 
+    // ******************************** METODOS PUT *******************************************************
+
+    @RequestMapping(method =  RequestMethod.PUT)
+    public ResponseEntity<Void> alterar(@RequestBody Ecc ecc){
+        ecc = eccService.alterar(ecc);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(ecc.getIdECC()).toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
+
 
     // ******************************** METODOS DELETE *******************************************************
 
@@ -37,6 +49,7 @@ public class EccResources {
 
     }
 
+    // ******************************** METODOS POST *******************************************************
 
     @RequestMapping(method =  RequestMethod.POST)
     public ResponseEntity<Void> salvar(@RequestBody Ecc ecc){
@@ -47,6 +60,8 @@ public class EccResources {
 
         return ResponseEntity.created(uri).build();
     }
+
+    // ******************************** METODOS GET *******************************************************
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Ecc>> listar(){

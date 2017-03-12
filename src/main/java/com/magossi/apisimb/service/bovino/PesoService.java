@@ -39,6 +39,21 @@ public class PesoService {
     }
 
 
+    public Peso alterar(Peso peso){
+        buscarId(peso.getIdPeso());
+        return pesoRepository.save(peso);
+
+    }
+
+    public Peso buscarId(Long id) {
+
+        Peso peso = pesoRepository.findOne(id);
+
+        if(peso==null){
+            throw new PesoNaoEncontradoException("O Peso não pode ser Encontrado");
+        }
+        return peso;
+    }
 
 
     public void deletar(Long id) {
@@ -50,9 +65,10 @@ public class PesoService {
             pesoRepository.delete(peso);
 
         } catch (EmptyResultDataAccessException e) {
-            throw new PesoNaoEncontradoException("O Ecc não pode ser Encontrado");
+            throw new PesoNaoEncontradoException("O Peso não pode ser Encontrado");
         }
     }
+
 
 
 

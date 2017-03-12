@@ -38,6 +38,13 @@ public class EccService {
         return eccRepository.save(ecc);
     }
 
+
+    public Ecc alterar(Ecc ecc){
+        buscarId(ecc.getIdECC());
+        return eccRepository.save(ecc);
+
+    }
+
     public void deletar(Long id) {
 
 
