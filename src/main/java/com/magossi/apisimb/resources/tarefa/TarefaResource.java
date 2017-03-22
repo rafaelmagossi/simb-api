@@ -36,19 +36,12 @@ public class TarefaResource {
     public BovinoService bovinoService;
 
 
+    // ******************************** METODOS POST *******************************************************
+
+
     @RequestMapping(method =  RequestMethod.POST)
     public ResponseEntity<Void> salvar(@RequestBody Tarefa tarefa){
         tarefa = tarefaService.salvar(tarefa);
-
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}").buildAndExpand(tarefa.getIdTarefa()).toUri();
-
-        return ResponseEntity.created(uri).build();
-    }
-
-    @RequestMapping(method =  RequestMethod.PUT)
-    public ResponseEntity<Void> alterar(@RequestBody Tarefa tarefa){
-        tarefa = tarefaService.alterar(tarefa);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(tarefa.getIdTarefa()).toUri();
@@ -75,6 +68,33 @@ public class TarefaResource {
         return ResponseEntity.created(uri).build();
     }
 
+
+    // ******************************** METODOS PUT *******************************************************
+
+    @RequestMapping(method =  RequestMethod.PUT)
+    public ResponseEntity<Void> alterar(@RequestBody Tarefa tarefa){
+        tarefa = tarefaService.alterar(tarefa);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(tarefa.getIdTarefa()).toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
+
+
+
+    // ******************************** METODOS DELETE *******************************************************
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<Void> deletar(@PathVariable("id")Long id){
+
+        tarefaService.deletar(id);
+        return ResponseEntity.status(HttpStatus.OK).build();
+
+    }
+
+
+    // ******************************** METODOS GET *******************************************************
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Tarefa>> listar(){
@@ -105,7 +125,6 @@ public class TarefaResource {
 
     }
 
-
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Tarefa> buscarTarefaPorId(@PathVariable("id") Long id){   //? encapsula qualquer tipo de objeto
 
@@ -124,8 +143,6 @@ public class TarefaResource {
     @RequestMapping(value = "/dataAtivas/{data}", method = RequestMethod.GET)
     public ResponseEntity<List<Tarefa>> buscarTarefaAtivasPorData(@PathVariable("data")String dataString) throws Exception {
 
-
-
         List<Tarefa> tarefas = null;
 
         if("todos".equals(dataString)){
@@ -141,8 +158,6 @@ public class TarefaResource {
 
     @RequestMapping(value = "/dataConcluidas/{data}", method = RequestMethod.GET)
     public ResponseEntity<List<Tarefa>> buscarTarefaConcluidasPorData(@PathVariable("data")String dataString) throws Exception {
-
-
 
         List<Tarefa> tarefas = null;
 

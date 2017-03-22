@@ -8,6 +8,7 @@ import com.magossi.apisimb.service.exceptions.BovinoNaoEncontradoException;
 import com.magossi.apisimb.service.exceptions.BovinoNaoExistenteException;
 import com.magossi.apisimb.service.exceptions.EccNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -40,6 +41,17 @@ public class TarefaService {
 
         return tarefaRepository.save(tarefa);
 
+    }
+
+    public void deletar(Long id) {
+
+        try {
+            Tarefa tarefa = tarefaRepository.findOne(id);
+            tarefaRepository.delete(tarefa);
+
+        } catch (EmptyResultDataAccessException e) {
+            throw new EccNaoEncontradoException("A Tarefa não pode ser Encontrada");
+        }
     }
 
     public Tarefa atualizar(Tarefa tarefa){
