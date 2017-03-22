@@ -105,6 +105,14 @@ public class TarefaResource {
 
     }
 
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Tarefa> buscarTarefaPorId(@PathVariable("id") Long id){   //? encapsula qualquer tipo de objeto
+
+        Tarefa tarefa = tarefaService.buscarId(id);
+        return ResponseEntity.status(HttpStatus.OK).body(tarefa);
+    }
+
     @RequestMapping(value = "/bovinoMatriz/{idBovino}", method = RequestMethod.GET)
     public ResponseEntity<List<Tarefa>> buscarTarefasPorBovinoMatriz(@PathVariable("idBovino")Long idBovino){
         Bovino bovino = bovinoService.buscarId(idBovino);
